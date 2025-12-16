@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:appli_meteo/pages/home.dart';
-import 'package:appli_meteo/widgets/grand_meteo.dart';
+import 'package:appli_meteo/src/pages/home.dart';
+import 'package:appli_meteo/src/pages/widgets/grand_meteo.dart';
+import 'package:appli_meteo/src/pages/services/meteo_api.dart';
+import 'package:appli_meteo/src/pages/widgets/icons/meteo_icon.dart';
 
 void main() {
   runApp(const MyApp());
