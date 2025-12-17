@@ -2,31 +2,27 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class WeatherApi {
-  static const String apiKey = "";
+  static const String _apiKey = "f76f9c069a4d17da06b4a5d088a13376";
+  static const String _baseUrl =
+  "https://api.openweathermap.org/data/2.5/weather";
 
-  static Future<Map<String, dynamic>?> getCurrentWeather(String city) async {
-    final url = Uri.parse(
-      "https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&lang=fr&appid=$apiKey",
-    );
+  /// Récupérer la météo par ville
+  static Future<Map<String, dynamic>?> fetchWeatherByCity(String city) async {
+    final url =
+        "$_baseUrl?q=$city&appid=$_apiKey&units=metric&lang=fr";
 
-    final response = await http.get(url);
+    try {
+      final response = await http.get(Uri.parse(url));
 
-    if (response.statusCode == 200) {
-      return jsonDecode(response.body);
+      if (response.statusCode == 200) {
+        return json.decode(response.body);
+      } else {
+        print("Erreur API : ${response.body}");
+        return null;
+      }
+    } catch (e) {
+      print("Erreur réseau : $e");
+      return null;
     }
-    return null;
-  }
-
-  static Future<List<dynamic>> getForecast(double lat, double lon) async {
-    final url = Uri.parse(
-      "https://api.openweathermap.org/data/2.5/forecast?lat=$lat&lon=$lon&units=metric&lang=fr&appid=$apiKey",
-    );
-
-    final response = await http.get(url);
-
-    if (response.statusCode == 200) {
-      return jsonDecode(response.body)["list"];
-    }
-    return [];
   }
 }

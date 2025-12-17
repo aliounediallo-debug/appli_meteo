@@ -8,13 +8,13 @@ class GrandMeteo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (data == null) return const SizedBox();
+
 
     return Container(
       margin: const EdgeInsets.only(top: 20),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 53, 46, 59),
+        color: const Color.fromARGB(255, 124, 58, 182),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(

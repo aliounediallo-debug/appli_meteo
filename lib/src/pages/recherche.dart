@@ -36,7 +36,7 @@ class _SearchPageState extends State<Recherche> {
                 hintStyle: const TextStyle(color: Colors.white70),
                 prefixIcon: const Icon(Icons.search, color: Colors.white),
                 filled: true,
-                fillColor: const Color.fromARGB(255, 53, 46, 59),
+                fillColor: const Color.fromARGB(255, 89, 81, 97),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,
@@ -49,12 +49,20 @@ class _SearchPageState extends State<Recherche> {
               width: double.infinity,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 81, 52, 209),
+                  backgroundColor: Colors.deepPurple,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
                 onPressed: submit,
-                child: const Text("Rechercher"),
+                child: const Text(
+                  "Rechercher",
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
               ),
-            )
+            ),
+
           ],
         ),
       ),
