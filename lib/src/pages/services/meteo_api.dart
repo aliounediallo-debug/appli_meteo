@@ -6,7 +6,7 @@ class WeatherApi {
   static const String _baseUrl =
   "https://api.openweathermap.org/data/2.5/weather";
 
-  /// Récupérer la météo par ville
+
   static Future<Map<String, dynamic>?> fetchWeatherByCity(String city) async {
     final url =
         "$_baseUrl?q=$city&appid=$_apiKey&units=metric&lang=fr";

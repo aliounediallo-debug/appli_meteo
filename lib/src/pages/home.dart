@@ -32,11 +32,11 @@ class _HomePageState extends State<HomePage> {
     });
   }
   @override
-void initState() {
-  super.initState();
-  searchController.text = "Dakar";
-  fetchWeather(); // appel automatique
-}
+  void initState() {
+    super.initState();
+    searchController.text = "Dakar";
+    fetchWeather(); // appel automatique
+  }
 
 
   @override
@@ -55,17 +55,18 @@ void initState() {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image.asset(
                       "img/brightness.png",
+                      color: Color.fromARGB(255, 41, 2, 80),
                       width: 28,
                       height: 28,
                     ),
-                    const SizedBox(width: 6),
                     const Text(
                       "MÉTÉO",
                       style: TextStyle(
-                        color: Color.fromARGB(255, 35, 107, 165),
+                        color: Color.fromARGB(255, 41, 2, 80),
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -92,8 +93,6 @@ void initState() {
               ],
             ),
 
-            const SizedBox(height: 12),
-
             const Text(
               "Comment va\nle temps\naujourd'hui ?",
               textAlign: TextAlign.center,
@@ -119,7 +118,6 @@ void initState() {
 
             if (!isLoading && weatherData != null) ...[
               GrandMeteo(data: weatherData),
-              const SizedBox(height: 20),
               GrilleStat(),
             ],
 

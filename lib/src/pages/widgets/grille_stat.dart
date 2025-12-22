@@ -12,8 +12,11 @@ class GrilleStat extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
 
-        child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Wrap(
+                    alignment: WrapAlignment.center,
+                     spacing: 26,
+                      runSpacing: 10,
+
                       children: [
                         Expanded(
                           child: Column(
@@ -22,11 +25,11 @@ class GrilleStat extends StatelessWidget {
                               const Text(
                                 "Ressenti",
                                 style: TextStyle(
-                                  color: Color.fromARGB(179, 41, 38, 38),
-                                  fontSize: 18,
+                                  color: Color.fromARGB(179, 2, 2, 2),
+                                  fontSize: 24,
                                 ),
                               ),
-                              const SizedBox(height: 6),
+
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                 decoration: BoxDecoration(
@@ -37,7 +40,7 @@ class GrilleStat extends StatelessWidget {
                                   "24°",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 32,
+                                    fontSize: 40,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -45,7 +48,7 @@ class GrilleStat extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(width: 12),
+
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,11 +56,11 @@ class GrilleStat extends StatelessWidget {
                               const Text(
                                 "Humidité",
                                 style: TextStyle(
-                                  color: Color.fromARGB(179, 41, 38, 38),
-                                  fontSize: 18,
+                                  color: Color.fromARGB(179, 2, 2, 2),
+                                  fontSize: 24,
                                 ),
                               ),
-                              const SizedBox(height: 6),
+
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                 decoration: BoxDecoration(
@@ -68,7 +71,7 @@ class GrilleStat extends StatelessWidget {
                                   "43%",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 32,
+                                    fontSize: 40,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -76,19 +79,19 @@ class GrilleStat extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(width: 12),
+
                         Expanded(
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+
                             children: [
                               const Text(
                                 "Pression",
                                 style: TextStyle(
-                                  color: Color.fromARGB(179, 41, 38, 38),
-                                  fontSize: 18,
+                                  color: Color.fromARGB(179, 2, 2, 2),
+                                  fontSize: 24,
                                 ),
                               ),
-                              const SizedBox(height: 6),
+
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                 decoration: BoxDecoration(
@@ -99,7 +102,7 @@ class GrilleStat extends StatelessWidget {
                                   "1014 hPa",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 20,
+                                    fontSize: 25,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),

@@ -36,7 +36,7 @@ class _SearchPageState extends State<Recherche> {
                 hintStyle: const TextStyle(color: Colors.white70),
                 prefixIcon: const Icon(Icons.search, color: Colors.white),
                 filled: true,
-                fillColor: const Color.fromARGB(255, 89, 81, 97),
+                fillColor: const Color.fromARGB(255, 41, 2, 80),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,

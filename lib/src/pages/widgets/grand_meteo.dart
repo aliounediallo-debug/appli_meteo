@@ -11,21 +11,25 @@ class GrandMeteo extends StatelessWidget {
 
 
     return Container(
+      width: 300,
+      height: 50,
       margin: const EdgeInsets.only(top: 20),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 124, 58, 182),
+        color: const Color.fromARGB(255, 41, 2, 80),
         borderRadius: BorderRadius.circular(20),
+
       ),
-      child: Column(
+      child: Wrap(
+        spacing: 10,
+        runSpacing: 12,
         children: [
           Text(
             data!["name"],
             style: const TextStyle(color: Colors.white, fontSize: 22),
           ),
-          const SizedBox(height: 10),
+
           MeteoIcon(main: data!["weather"][0]["main"]),
-          const SizedBox(height: 10),
           Text(
             "${data!["main"]["temp"].round()}°C",
             style: const TextStyle(
